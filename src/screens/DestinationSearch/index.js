@@ -30,7 +30,7 @@ const DestinationSearch = (props) => {
                     }}
                     fetchDetails
                     query={{
-                        key: 'AIzaSyCp52AlSOwGxq9T9aRJ8KFrCpY7phpH_pg',
+                        key: API_KEY,
                         language: 'en',
                     }}
                 />
@@ -45,7 +45,7 @@ const DestinationSearch = (props) => {
                     }}
                     fetchDetails
                     query={{
-                        key: 'AIzaSyCp52AlSOwGxq9T9aRJ8KFrCpY7phpH_pg',
+                        key: API_KEY,
                         language: 'en',
                     }}
                 />

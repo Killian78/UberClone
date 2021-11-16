@@ -4,7 +4,6 @@ import { View, Text, Image } from "react-native";
 
 import styles from './styles'
 
-import UberTypes from "../../components/UberTypes";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const UberTypeRow = (props) => {
