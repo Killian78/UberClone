@@ -3,12 +3,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import HomeScreen from "./src/screens/HomeScreen"
+import DestinationSearch from "./src/screens/DestinationSearch"
+import SearchResults from './src/screens/SearchResults';
 
 export default function App() {
   return (
     <View style={styles.container}>
       
-      <HomeScreen/>
+      <SearchResults />
 
       <StatusBar style="auto" />
     </View>
