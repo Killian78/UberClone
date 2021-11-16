@@ -1,16 +1,47 @@
+/* eslint-disable react/jsx-key */
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Image, FlatList } from 'react-native'
+import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
+
+import cars from '../../../assets/data/cars'
 
 const HomeMap = (props) => {
+
+    const getImageName = (type) => {
+        if (type === 'UberX'){
+            return require('../../../assets/images/top-UberX.png')
+        }
+        if (type === 'Comfort'){
+            return require('../../../assets/images/top-Comfort.png')
+        }
+        if (type === 'UberXL'){
+            return require('../../../assets/images/top-UberXL.png')
+        }
+    }
+
     return (
-        <View style={{
-            height: 350, 
-            backgroundColor:"#a0abff", 
-            justifyContent: 'center', 
-            alignItems: 'center'
-        }}>
-            <Text>I am a map</Text>
-        </View>
+        <MapView
+            provider={PROVIDER_GOOGLE}
+            style={{height: '100%', width: '100%'}}
+            initialRegion={{
+                latitude: 28.450627,
+                longitude: -16.263045,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421,
+            }}
+        >
+            {cars.map((car) => (
+                <Marker
+                    key={car.id}
+                    coordinate={{ latitude : car.latitude , longitude : car.longitude }}
+                >
+                    <Image 
+                        style={{width: 70, height: 70, resizeMode: 'contain'}}
+                        source={getImageName(car.type)} 
+                    />
+                </Marker>
+            ))}
+        </MapView>
     );
 };
 

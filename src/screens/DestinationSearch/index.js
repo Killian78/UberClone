@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { View, Text, TextInput, SafeAreaView } from "react-native";
 import styles from "./styles";
+import {API_KEY} from "@env";
 
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
