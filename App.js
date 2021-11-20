@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, StatusBar, PermissionsAndroid, Platform, View, Text } from 'react-native';
 import * as Location from 'expo-location';
 
-import HomeScreen from "./src/screens/HomeScreen"
-import DestinationSearch from "./src/screens/DestinationSearch"
-import SearchResults from './src/screens/SearchResults';
+import Router from './src/navigation/Root';
 
 Location.installWebGeolocationPolyfill()
 
@@ -57,19 +55,10 @@ export default function App() {
   }, [])
 
   return (
-    <View style={styles.container}>
-      <DestinationSearch />
+    <>
+      <Router />
 
       <StatusBar style="auto" />
-    </View>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    //flex: 1,
-    //backgroundColor: '#fff',
-    //alignItems: 'center',
-    //justifyContent: 'center',
-  },
-});
