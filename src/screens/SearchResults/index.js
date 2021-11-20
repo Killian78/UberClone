@@ -1,5 +1,6 @@
 import React from "react"
 import { View, Text, Dimensions } from "react-native";
+import { useRoute } from "@react-navigation/native";
 
 import styles from './styles'
 
@@ -8,6 +9,10 @@ import UberTypes from "../../components/UberTypes";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const SearchResults = (props) => {
+
+    const route = useRoute();
+    console.log(route.params);
+
     return (
         <View style={{display: 'flex', justifyContent: 'space-between'}}>
             <View style={{height: Dimensions.get('window').height - 450}}>

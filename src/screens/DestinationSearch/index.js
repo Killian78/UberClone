@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { View, Text, TextInput, SafeAreaView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
 import {API_KEY} from "@env";
 
@@ -17,12 +18,17 @@ const workPlace = {
 
 const DestinationSearch = (props) => {
 
+    const navigation = useNavigation();
+
     const [originPlace, setOriginPlace] = useState(null);
     const [destinationPlace, setDestinationPlace] = useState(null);
 
     useEffect(() => {
         if (originPlace && destinationPlace) {
-            console.warn('Redirect to result')
+            navigation.navigate('SearchResults',{
+                originPlace,
+                destinationPlace
+            })
         }
     }, [originPlace, destinationPlace])
 
