@@ -6,10 +6,18 @@ import {API_KEY} from '@env';
 
 import cars from '../../../assets/data/cars'
 
-const RouteMap = (props) => {
+const RouteMap = ({origin, destination}) => {
+    
+    const originLoc = {
+        latitude: origin.details.geometry.location.lat,
+        longitude: origin.details.geometry.location.lng,
+    };
+    const destinationLoc = {
+        latitude: destination.details.geometry.location.lat,
+        longitude: destination.details.geometry.location.lng,
+    };
 
-    const origin = {latitude: 28.450627, longitude: -16.263045};
-    const destination = {latitude: 28.450127, longitude: -16.269045};
+    //console.log(originLoc)
 
     return (
         <MapView
@@ -24,17 +32,17 @@ const RouteMap = (props) => {
             }}
         >
             <MapViewDirections
-                origin={origin}
-                destination={destination} 
+                origin={originLoc}
+                destination={destinationLoc} 
                 apikey={API_KEY}
                 strokeWidth={5}
             />
             <Marker
-                coordinate={origin}
+                coordinate={originLoc}
                 title={'Origin'}
             />
             <Marker
-                coordinate={destination}
+                coordinate={destinationLoc}
                 title={'Destination'}
             />
         </MapView>

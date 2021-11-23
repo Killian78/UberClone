@@ -58,7 +58,7 @@ export default function App() {
     <>
       <Router />
 
-      <StatusBar style="auto" />
+      <StatusBar barStyle="dark-content" />
     </>
   );
 }
