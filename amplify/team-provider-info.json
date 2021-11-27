@@ -10,6 +10,14 @@
       "StackName": "amplify-uberclone-dev-130541",
       "StackId": "arn:aws:cloudformation:eu-west-3:976502133443:stack/amplify-uberclone-dev-130541/59a59130-4f7a-11ec-ac62-0eb3e840fec4",
       "AmplifyAppId": "d3ur3g3t9a968d"
+    },
+    "categories": {
+      "auth": {
+        "uberclonef440d0e8f440d0e8": {}
+      },
+      "function": {
+        "uberclonef440d0e8f440d0e8PostConfirmation": {}
+      }
     }
   }
 }

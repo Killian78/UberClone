@@ -1,1 +1,9 @@
-{}
+{
+  "function": {
+    "uberclonef440d0e8f440d0e8PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  }
+}
