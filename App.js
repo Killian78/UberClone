@@ -3,7 +3,7 @@ import { StyleSheet, StatusBar, PermissionsAndroid, Platform, View, Text } from 
 import * as Location from 'expo-location';
 
 import Router from './src/navigation/Root';
-// Comment
+
 Location.installWebGeolocationPolyfill()
 
 export default function App() {
