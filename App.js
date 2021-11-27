@@ -6,6 +6,10 @@ import Router from './src/navigation/Root';
 
 Location.installWebGeolocationPolyfill()
 
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
+Amplify.configure(config)
+
 export default function App() {
 
   const [location, setLocation] = useState(null);
