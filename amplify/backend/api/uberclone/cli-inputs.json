@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "uberclone",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\Killian\\Projects\\UberClone\\amplify\\backend\\api\\uberclone\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authuberclonef440d0e8f440d0e8"
+    }
+  }
+}
