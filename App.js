@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, StatusBar, PermissionsAndroid, Platform, View, Text } from 'react-native';
 import * as Location from 'expo-location';
+import { withAuthenticator } from 'aws-amplify-react-native'
 
 import Router from './src/navigation/Root';
 
@@ -10,7 +11,7 @@ import Amplify from 'aws-amplify'
 import config from './aws-exports'
 Amplify.configure(config)
 
-export default function App() {
+const App = () => {
 
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -66,3 +67,5 @@ export default function App() {
     </>
   );
 }
+
+export default withAuthenticator(App);
